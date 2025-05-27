@@ -64,7 +64,7 @@ To run this project locally, simply follow these steps:
 *(You can add screenshots of your application here to showcase its features and design. For example:)*
 
 *   **Dashboard Overview:**
-    ![Dashboard Screenshot](https://drive.google.com/drive/u/0/folders/17fLRTLN6TR8uqgGitnqUB4BGZCRRqEQ9)
+    ![Dashboard Screenshot](https://github.com/devilsutra/basic-task-management-system/blob/0b1b391faecd6333a15d3e50ccabb2a0e163ab58/ss/dashboard.png)
 *   **Login Page:**
     ![Login Page Screenshot](path/to/your/login-screenshot.png)
 *   **Task Management Page:**
