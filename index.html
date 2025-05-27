@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Task Manager Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://www.recordnet.com/gcdn/presto/2021/03/22/NRCD/9d9dd9e4-e84a-402e-ba8f-daa659e6e6c5-PhotoWord_003.JPG?width=660&height=425&fit=crop&format=pjpg&auto=webp');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            color: white; 
+        }
+        .login-container {
+            width: 380px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin: 0 0 30px;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .login-btn {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-btn:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-footer {
+            margin-top: 25px;
+            font-size: 14px;
+        }
+
+        .login-footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container glass-card">
+        <h2>Welcome Back</h2>
+        
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" placeholder="Username" required>
+        </div>
+        
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+        
+        <button class="btn btn-primary" id="loginBtn">LOGIN</button>
+        
+        <div class="login-footer">
+            <a href="register.html">Create Account</a>
+            <a href="#">Forgot Password?</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

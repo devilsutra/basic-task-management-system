@@ -1,0 +1,222 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+.glass-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s;
+    box-sizing: border-box; 
+}
+
+.input-group input::placeholder,
+.input-group select::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.input-group select option {
+    background-color: rgba(102, 126, 234, 0.9);
+    color: white;
+}
+.btn {
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+}
+
+.btn-primary {
+    background: white;
+    color: #667eea;
+    width: 100%; 
+}
+
+.btn-primary:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: auto; 
+    padding: 8px 20px; 
+    box-shadow: none; 
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-danger { 
+    background: #ff4757;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 20px; 
+    border-radius: 30px; 
+    box-shadow: none;
+}
+
+.btn-danger:hover {
+    background: #cc3945;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.btn-success { 
+    background: #28a745; 
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 20px;
+    border-radius: 30px;
+    box-shadow: none;
+}
+
+.btn-success:hover {
+    background: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.task-form, .employee-form, .task-list, .employee-list {
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+.task-form h2, .employee-form h2, .task-list h2, .employee-list h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.task-form .btn-primary, .employee-form .btn-primary {
+    margin-top: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.05); 
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+th {
+    background: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03); 
+}
+.action-buttons {
+    display: flex;
+    gap: 10px; 
+    flex-wrap: wrap; 
+}
+
+
+td .btn {
+    padding: 6px 12px; 
+    font-size: 0.9rem; 
+    flex-shrink: 0; 
+}
+
+.active {
+    color: #2ed573; 
+    font-weight: bold;
+}
+
+.inactive {
+    color: #ff4757; 
+    font-weight: bold;
+}
+
+.pending {
+    color: #ffa502;
+    font-weight: bold;
+}
+
+.in-progress {
+    color: #6e8efb; 
+    font-weight: bold;
+}
+
+.completed {
+    color: #2ed573; 
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 20px auto;
+    }
+    .btn {
+        width: auto; 
+    }
+}

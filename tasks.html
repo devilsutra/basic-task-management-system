@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - Task Manager Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/1600x900/?work,productivity');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://imgcap.capturetheatlas.com/wp-content/uploads/2024/06/Mungo-MWCore-1Feature.jpg');
+        }
+
+        .container h1 {
+            color: white; 
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .container > .btn-secondary { 
+            display: block;
+            margin: 0 auto 30px auto;
+            max-width: 200px;
+            text-align: center;
+        }
+        .task-list table th,
+        .task-list table td {
+            color: rgba(255, 255, 255, 0.9);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .task-list table th {
+             background: rgba(255, 255, 255, 0.15); 
+        }
+
+        .task-list table tr:nth-child(even) {
+            background: rgba(255, 255, 255, 0.05); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Management</h1>
+        <button class="btn btn-secondary" id="backToDashboardBtn">
+            <i class="fas fa-arrow-left"></i> Back to Dashboard
+        </button>
+        
+        <div class="task-form glass-card">
+            <h2>Add New Task</h2>
+            <div class="input-group">
+                <i class="fas fa-heading"></i>
+                <input type="text" id="taskTitle" placeholder="Title" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-align-left"></i>
+                <input type="text" id="taskDesc" placeholder="Description" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-user-tag"></i>
+                <select id="taskEmployee">
+                    <option value="">-- Assign to --</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" id="addTaskBtn">
+                <i class="fas fa-plus"></i> Add Task
+            </button>
+        </div>
+
+        <div class="task-list glass-card">
+            <h2>Task List</h2>
+            <table id="taskTable">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Assigned To</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="taskList"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Task Manager Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://imgcap.capturetheatlas.com/wp-content/uploads/2024/06/Mungo-MWCore-1Feature.jpg');
+            background-size: cover;
+            
+            background-attachment: fixed;
+            color: white; 
+            min-height: 100vh;
+        }
+        .dashboard-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 600;
+            background: linear-gradient(to right, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .logout-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: none; 
+            display: flex; 
+            align-items: center;
+            gap: 8px; 
+        }
+
+        .logout-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-card i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .stat-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .stat-card p {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .action-btn {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .action-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .action-btn i {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .recent-activity h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        .activity-details p {
+            margin: 0;
+        }
+
+        .activity-time {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        @media (max-width: 768px) {
+            .dashboard-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+            
+            .user-info {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Dashboard</h1>
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <span id="usernameDisplay"></span>
+                <button class="logout-btn" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card glass-card">
+                <i class="fas fa-tasks"></i>
+                <h3>Total Tasks</h3>
+                <p id="totalTasks">0</p>
+            </div>
+            <div class="stat-card glass-card">
+                <i class="fas fa-users"></i>
+                <h3>Active Employees</h3>
+                <p id="activeEmployees">0</p>
+            </div>
+            <div class="stat-card glass-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>Completed Tasks</h3>
+                <p id="completedTasks">0</p>
+            </div>
+            <div class="stat-card glass-card">
+                <i class="fas fa-clock"></i>
+                <h3>Pending Tasks</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+        </div>
+        <div class="quick-actions">
+            <a href="tasks.html" class="action-btn glass-card">
+                <i class="fas fa-plus"></i>
+                <span>Add New Task</span>
+            </a>
+            <a href="tasks.html" class="action-btn glass-card">
+                <i class="fas fa-list-ul"></i>
+                <span>View All Tasks</span>
+            </a>
+            <a href="employees.html" class="action-btn glass-card">
+                <i class="fas fa-user-plus"></i>
+                <span>Manage Employees</span>
+            </a>
+        </div>
+        <div class="recent-activity glass-card">
+            <h2>Recent Activity</h2>
+            <div id="activityList">
+                <p style="text-align: center; color: rgba(255, 255, 255, 0.7);">Loading activity...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
