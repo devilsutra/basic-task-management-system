@@ -61,16 +61,14 @@ To run this project locally, simply follow these steps:
 
 ## 📸 Screenshots
 
-*(You can add screenshots of your application here to showcase its features and design. For example:)*
-
 *   **Dashboard Overview:**
     ![Dashboard Screenshot](https://github.com/devilsutra/basic-task-management-system/blob/0b1b391faecd6333a15d3e50ccabb2a0e163ab58/ss/dashboard.png)
 *   **Login Page:**
-    ![Login Page Screenshot](path/to/your/login-screenshot.png)
+    ![Login Page Screenshot](https://github.com/devilsutra/basic-task-management-system/blob/61b991a6a0f9ca5706798d5da9519212d6fa70c6/ss/login.png)
 *   **Task Management Page:**
-    ![Task Management Screenshot](path/to/your/tasks-screenshot.png)
+    ![Task Management Screenshot](https://github.com/devilsutra/basic-task-management-system/blob/61b991a6a0f9ca5706798d5da9519212d6fa70c6/ss/task.png)
 *   **Employee Management Page:**
-    ![Employee Management Screenshot](path/to/your/employees-screenshot.png)
+    ![Employee Management Screenshot](https://github.com/devilsutra/basic-task-management-system/blob/61b991a6a0f9ca5706798d5da9519212d6fa70c6/ss/employee.png)
 
 ---
 
@@ -93,29 +91,10 @@ This project currently uses `LocalStorage` for simplicity. For a production-read
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! If you have suggestions for improvements, new features, or find any bugs, please feel free to:
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature/your-feature-name`).
-3.  Make your changes.
-4.  Commit your changes (`git commit -m 'feat: Add new feature X'`).
-5.  Push to the branch (`git push origin feature/your-feature-name`).
-6.  Open a Pull Request.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
 ## 📧 Contact
 
 *   **Limesh**
-*   GitHub: [YourGitHubUsername](https://github.com/YourGitHubUsername)
-*   Email: [YourEmail@example.com](mailto:YourEmail@example.com)
+*   GitHub: [devilsutra](https://github.com/devilsutra)
+*   Email: [limeshchoudhari@gmail.com](mailto:limeshchoudhari@gmail.com)
 
 Feel free to connect!
